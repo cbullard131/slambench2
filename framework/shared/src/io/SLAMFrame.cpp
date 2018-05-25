@@ -328,7 +328,7 @@ void* ImageFileFrame::LoadFile() {
 	// get file extension
 	std::string ext = Filename.substr(Filename.size()-3, 3);
 	
-	if(ext == "png") return LoadPng();
+	if(ext == "png" || ext == "bmp") return LoadPng();
 	else if(ext == "pgm") return LoadPbm();
 	else throw std::logic_error("Unrecognized file type");
 }
